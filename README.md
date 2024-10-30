@@ -1,7 +1,7 @@
 # Cybersecurity-and-data-privacy
 IT00AK39-3002 Cybersecurity and data privacy
 
-Objectives
+Objectives:
 
 The student knows about security measures that aim to prevent data from being stolen or hijacked.
 
