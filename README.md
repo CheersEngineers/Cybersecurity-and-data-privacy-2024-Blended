@@ -22,3 +22,10 @@
 
 > Completed Labs in Authentication:
 >  - Username enumeration via different responses (Apprentice)
+
+
+> Cons in Portswigger Labs:
+> - The attacking part of the Labs is extremely slow with the community version, and I lack the knowledge to do a script with python for example.
+
+> Pros in Portswigger Labs:
+>  - Feels good to do the tasks and accomplish them. This gives great practical experience on the subjects.
