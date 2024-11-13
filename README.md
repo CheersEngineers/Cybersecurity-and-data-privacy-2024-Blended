@@ -10,6 +10,15 @@
 | 2.11.2024 | 1 | Individual | Introduction to Cybersecurity: Course Final Exam (passed)
 | 4.11.2024 | 2 | Lecture 2 | Introduction to the PortSwigger environment
 | 4.11.2024 | 1 | Portswigger | Account made and started on SQL injection lab
-| 6.11.2024 | 2 | Open space | Workshop
+| 6.11.2024 | 2 | Open space | Workshop (Labs)
 | 11.11.2024 | 2 | Lecture 3 | Starting the project
-| 13.11.2024 | 2 | Open space | Workshop
+| 13.11.2024 | 2 | Open space | Workshop (Labs)
+
+> Completed Labs in SQL injection:
+> - SQL injection vulnerability in WHERE clause allowing retrieval of hidden data (Apprentice)
+> - SQL injection vulnerability allowing login bypass (Apprentice)
+> - SQL injection attack, querying the database type and version on MySQL and Microsoft (Practitioner)
+> - SQL injection attack, listing the database on non-Oracle databases (Practitioner)
+
+> Completed Labs in Authentication:
+>  - Username enumeration via different responses (Apprentice)
