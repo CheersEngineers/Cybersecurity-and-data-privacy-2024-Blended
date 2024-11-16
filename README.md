@@ -13,6 +13,11 @@
 | 6.11.2024 | 2 | Open space | Workshop (Labs)
 | 11.11.2024 | 2 | Lecture 3 | Starting the project
 | 13.11.2024 | 2 | Open space | Workshop (Labs)
+| 15.11.2024 | 2 | Open space | Portswigger Labs
+| 16.11.2024 | 2 | Open space | Portswigger Labs
+
+> [!NOTE]
+> Here is a list of completed Labs.
 
 > Completed Labs in SQL injection:
 > - SQL injection vulnerability in WHERE clause allowing retrieval of hidden data (Apprentice)
@@ -22,6 +27,12 @@
 
 > Completed Labs in Authentication:
 >  - Username enumeration via different responses (Apprentice)
+>  - 2FA simple bypass (Apprentice)
+>  - Lab: Password reset broken logic (Apprentice)
+
+> Completed Labs in Access control vulnerabilities:
+>  - Lab: Unprotected admin functionality (Apprentice)
+>  - Lab: Unprotected admin functionality with unpredictable URL (Apprentice)
 
 
 > Cons in Portswigger Labs:
