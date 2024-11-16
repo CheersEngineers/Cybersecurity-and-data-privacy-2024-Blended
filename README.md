@@ -19,24 +19,27 @@
 > [!NOTE]
 > Here is a list of completed Labs.
 
-> Completed Labs in SQL injection:
+> ### Completed Labs in SQL injection:
 > - SQL injection vulnerability in WHERE clause allowing retrieval of hidden data (Apprentice)
 > - SQL injection vulnerability allowing login bypass (Apprentice)
 > - SQL injection attack, querying the database type and version on MySQL and Microsoft (Practitioner)
 > - SQL injection attack, listing the database on non-Oracle databases (Practitioner)
 
-> Completed Labs in Authentication:
+> ### Completed Labs in Authentication:
 >  - Username enumeration via different responses (Apprentice)
 >  - 2FA simple bypass (Apprentice)
 >  - Lab: Password reset broken logic (Apprentice)
 
-> Completed Labs in Access control vulnerabilities:
+> ### Completed Labs in Access control vulnerabilities:
 >  - Lab: Unprotected admin functionality (Apprentice)
 >  - Lab: Unprotected admin functionality with unpredictable URL (Apprentice)
 
+> [!NOTE]
+> Now let's take a look at what was the Pros and Cons while using Portsvigger with Burp Suite Community Edition.
 
-> Cons in Portswigger Labs:
-> - The attacking part of the Labs is extremely slow with the community version, and I lack the knowledge to do a script with python for example.
+> ### Pros in Portswigger Labs:
+>  - I enjoyed to do the tasks and accomplish them. This gives great practical experience on the subjects.
+>  - The tasks are very clear, and also the instructions are crystal clear. This makes learning a lot faster and efficient.
 
-> Pros in Portswigger Labs:
->  - Feels good to do the tasks and accomplish them. This gives great practical experience on the subjects.
+> ### Cons in Portswigger Labs:
+> - The attacking part of some of the Labs is extremely slow with the Burp Suite Community Edition, and I lack the knowledge to do a script with python for example to do these attacks instead.
