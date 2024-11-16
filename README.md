@@ -33,6 +33,7 @@
 > ### Completed Labs in Access control vulnerabilities:
 >  - Lab: Unprotected admin functionality (Apprentice)
 >  - Lab: Unprotected admin functionality with unpredictable URL (Apprentice)
+>  - Lab: User role controlled by request parameter (Apprentice)
 
 > [!NOTE]
 > Now let's take a look at what was the Pros and Cons while using Portsvigger with Burp Suite Community Edition.
