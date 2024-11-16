@@ -13,8 +13,8 @@
 | 6.11.2024 | 2 | Open space | Workshop (Labs)
 | 11.11.2024 | 2 | Lecture 3 | Starting the project
 | 13.11.2024 | 2 | Open space | Workshop (Labs)
-| 15.11.2024 | 2 | Open space | Portswigger Labs
-| 16.11.2024 | 2 | Open space | Portswigger Labs
+| 15.11.2024 | 3 | Open space | Portswigger Labs
+| 16.11.2024 | 3 | Open space | Portswigger Labs
 
 > [!NOTE]
 > Here is a list of completed Labs.
@@ -24,16 +24,25 @@
 > - SQL injection vulnerability allowing login bypass (Apprentice)
 > - SQL injection attack, querying the database type and version on MySQL and Microsoft (Practitioner)
 > - SQL injection attack, listing the database on non-Oracle databases (Practitioner)
+> - SQL injection UNION attack, determining the number of columns returned by the query (Practitioner)
+> - SQL injection UNION attack, finding a column containing text (Practitioner)
+> - SQL injection UNION attack, retrieving data from other tables (Practitioner)
+> - SQL injection UNION attack, retrieving multiple values in a single column (Practitioner)
+> - Blind SQL injection with conditional responses (Practitioner)
+
+> ### Completed Labs in Cross-site scripting:
+>  - Reflected XSS into HTML context with nothing encoded (Apprentice)
+>  - Stored XSS into HTML context with nothing encoded (Apprentice)
 
 > ### Completed Labs in Authentication:
 >  - Username enumeration via different responses (Apprentice)
 >  - 2FA simple bypass (Apprentice)
->  - Lab: Password reset broken logic (Apprentice)
+>  - Password reset broken logic (Apprentice)
 
 > ### Completed Labs in Access control vulnerabilities:
->  - Lab: Unprotected admin functionality (Apprentice)
->  - Lab: Unprotected admin functionality with unpredictable URL (Apprentice)
->  - Lab: User role controlled by request parameter (Apprentice)
+>  - Unprotected admin functionality (Apprentice)
+>  - Unprotected admin functionality with unpredictable URL (Apprentice)
+>  - User role controlled by request parameter (Apprentice)
 
 > [!NOTE]
 > Now let's take a look at what was the Pros and Cons while using Portsvigger with Burp Suite Community Edition.
