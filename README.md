@@ -13,8 +13,10 @@
 | 6.11.2024 | 2 | Open space | Workshop (Labs)
 | 11.11.2024 | 2 | Lecture 3 | Starting the project
 | 13.11.2024 | 2 | Open space | Workshop (Labs)
-| 15.11.2024 | 3 | Open space | Portswigger Labs
-| 16.11.2024 | 3 | Open space | Portswigger Labs
+| 15.11.2024 | 3 | Individual work | Portswigger Labs
+| 16.11.2024 | 3 | Individual work | Portswigger Labs
+| 20.11.2024 | 2 | Individual work | The Booking system project → Phase 1: Step 1
+| 21.11.2024 | 3 | Individual work | The Booking system project → Phase 1: Step 2 & 3
 
 > [!NOTE]
 > Here is a list of completed Labs.
