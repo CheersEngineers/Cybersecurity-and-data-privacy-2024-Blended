@@ -19,6 +19,11 @@
 | 21.11.2024 | 3 | Individual work | The Booking system project → Phase 1: Step 2 & 3
 
 > [!NOTE]
+> Here is The Booking system project links:
+
+> - Link to report 1: https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/Registration_page_first_test.md
+
+> [!NOTE]
 > Here is a list of completed Labs.
 
 > ### Completed Labs in SQL injection:
