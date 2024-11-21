@@ -1,6 +1,6 @@
 // app.js
 import { Hono } from "https://deno.land/x/hono/mod.ts";
-import { registerUser } from "./routes/register.js"; // Import register logic
+import { registerUser } from "./routes/Register.js"; // Import register logic
 const app = new Hono();
 
 // Serve the registration form
