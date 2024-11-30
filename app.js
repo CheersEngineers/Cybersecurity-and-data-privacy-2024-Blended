@@ -2,7 +2,7 @@
 import { Hono } from "https://deno.land/x/hono/mod.ts";
 import { loginUser } from "./routes/login.js"; // Import login logic
 import { registerUser } from "./routes/register.js"; // Import register logic
-import { Servestatic } from "https://deno.land/x/hono/middleware.ts";
+import { serveStatic } from "https://deno.land/x/hono/middleware.ts";
 
 // Create the Hono app
 const app = new Hono();
