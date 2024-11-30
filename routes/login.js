@@ -45,8 +45,8 @@ export async function loginUser(c) {
     
         } catch (error) {
             if (error instanceof z.ZodError) {
-                // Handle valida􀆟on errors from Zod
-            return c.text(`Valida􀆟on Error: ${error.errors.map(e => e.message).join(", ")}`, 400);
+                // Handle validation errors from Zod
+            return c.text(`Validation Error: ${error.errors.map(e => e.message).join(", ")}`, 400);
         }
 
         console.error(error);
