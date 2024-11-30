@@ -35,17 +35,13 @@ export async function registerUser(c) {
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
         // Insert the new user into the database
-        
+
         await client.queryArray(
             `INSERT INTO zephyr_users (username, password_hash, role, birthdate) VALUES ($1, $2, $3, $4)`,
             [username, hashedPassword, role, birthdate]
         );
         // Success response
-        //return c.text('User registered successfully!');
-
-        // Success response, redirect to the index page
-        return c.redirect('/');
-
+        return c.text('User registered successfully!');
     } catch (error) {
         if (error instanceof z.ZodError) {
             // Handle validation errors from Zod
