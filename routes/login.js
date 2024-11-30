@@ -11,7 +11,7 @@ const loginSchema = z.object({
 // Helper function to fetch the user by email
 async function getUserByEmail(email) {
     const result = await client.queryArray(
-        `SELECT user_id, username, password_hash FROM zephyr_users WHERE username = $1`,
+        `SELECT user_id, username, password_hash FROM abc123_users WHERE username = $1`,
         [email]
     );
     return result.rows.length > 0 ? result.rows[0] : null;
@@ -21,36 +21,32 @@ async function getUserByEmail(email) {
 export async function loginUser(c) {
     const body = await c.req.parseBody();
     const { username, password } = body;
-
+    
     try {
         // Validate the input data using Zod
         loginSchema.parse({ username, password });
-
+    
         // Fetch the user by email
         const user = await getUserByEmail(username);
         if (!user) {
             return c.text("Invalid email or password", 400);
         }
-
+    
         const [userId, storedUsername, storedPasswordHash] = user;
-
+    
         // Compare provided password with the stored hashed password
         const passwordMatches = await bcrypt.compare(password, storedPasswordHash);
         if (!passwordMatches) {
             return c.text("Invalid email or password", 400);
         }
-
-        // Authentication successful, proceed to create session or token
-        //return c.text(`Welcome back, ${storedUsername}!`);
-
-        // Authentication successful, redirect to the index page
-        return c.redirect('/');
-
-
-    } catch (error) {
-        if (error instanceof z.ZodError) {
-            // Handle validation errors from Zod
-            return c.text(`Validation Error: ${error.errors.map(e => e.message).join(", ")}`, 400);
+    
+        // Authen􀆟ca􀆟on successful, proceed to create session or token
+        return c.text(`Welcome back, ${storedUsername}!`);
+    
+        } catch (error) {
+            if (error instanceof z.ZodError) {
+                // Handle valida􀆟on errors from Zod
+            return c.text(`Valida􀆟on Error: ${error.errors.map(e => e.message).join(", ")}`, 400);
         }
 
         console.error(error);
