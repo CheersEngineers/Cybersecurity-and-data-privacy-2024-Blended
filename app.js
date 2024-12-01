@@ -36,20 +36,32 @@ app.get('/', async (c) => {
     return c.html(await Deno.readTextFile('./views/index.html'));
 });
 
-// Serve the registration form
-app.get('/register', async (c) => {
-    return c.html(await Deno.readTextFile('./views/register.html'));
+// Validate and sanitize user inputs middleware
+app.use('*', async (c, next) => {
+    const sanitizeInput = (input) => input.replace(/[^\w\s@.-]/g, ''); // Allow alphanumeric, spaces, @, ., -
+
+    if (c.req.method === 'POST') {
+        const body = await c.req.json();
+        for (const key in body) {
+            body[key] = sanitizeInput(body[key]);
+        }
+        c.req.parsedBody = body; // Attach sanitized body
+    }
+    return next();
 });
 
-// Route for user registration (POST request)
+// Serve pages
+app.get('/', async (c) => c.html(await Deno.readTextFile('./views/index.html')));
+app.get('/register', async (c) => c.html(await Deno.readTextFile('./views/register.html')));
 app.post('/register', registerUser);
-
-// Serve login page
-app.get('/login', async (c) => {
-    return c.html(await Deno.readTextFile('./views/login.html')); // Use the login.html file
-});
-// Handle user login
+app.get('/login', async (c) => c.html(await Deno.readTextFile('./views/login.html')));
 app.post('/login', loginUser);
+
+// Error handling
+app.onError((err, c) => {
+    console.error('Error:', err.message);
+    return c.text('Internal Server Error', 500);
+});
 
 Deno.serve(app.fetch);
 
