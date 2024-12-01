@@ -21,7 +21,7 @@
 | 26.11.2024 | 2 | Individual work | The Booking system project → Updating UI on Registration page and testing
 | 26.11.2024 | 2 | Individual work | The Booking system project → Updating UI on Registration page and testing
 | 27.11.2024 | 2 | Individual work | The Booking system project → Phase 2
-| 28.11.2024 | 2 | Individual work | The Booking system project → Phase 2
+| 01.12.2024 | 2 | Individual work | The Booking system project → Phase 2
 
 > [!NOTE]
 > Here is The Booking system project links:
