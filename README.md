@@ -39,7 +39,10 @@
 
 > [!NOTE]
 > Phase 2:
-> - Link to report 1: https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/login_page_first_test.md
+> - Link to report 1: Create login.html and login.js pages and get them working properly. Attack made by active scan.
+> - https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/login_page_first_test.md
+> - Link to report 2: Adding X-content-Type-Options: nosniff Header. Attack made with spider attack.
+> - https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/login_page_second_test.md
 
 > [!NOTE]
 > Here is a list of completed Labs.
