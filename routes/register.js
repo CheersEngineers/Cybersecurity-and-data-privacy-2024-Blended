@@ -40,8 +40,9 @@ export async function registerUser(c) {
             `INSERT INTO zephyr_users (username, password_hash, role, birthdate) VALUES ($1, $2, $3, $4)`,
             [username, hashedPassword, role, birthdate]
         );
-        // Success response
-        return c.text('User registered successfully!');
+        // Success response, redirect to the index page
+        return c.redirect('/');
+
     } catch (error) {
         if (error instanceof z.ZodError) {
             // Handle validation errors from Zod
