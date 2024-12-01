@@ -15,8 +15,13 @@
 | 13.11.2024 | 2 | Open space | Workshop (Labs)
 | 15.11.2024 | 3 | Individual work | Portswigger Labs
 | 16.11.2024 | 3 | Individual work | Portswigger Labs
+| 18.11.2024 | 2 | Lecture 4 | Authentication
 | 20.11.2024 | 2 | Individual work | The Booking system project → Phase 1: Step 1
 | 21.11.2024 | 3 | Individual work | The Booking system project → Phase 1: Step 2 & 3
+| 26.11.2024 | 2 | Individual work | The Booking system project → Updating UI on Registration page and testing
+| 26.11.2024 | 2 | Individual work | The Booking system project → Updating UI on Registration page and testing
+| 27.11.2024 | 2 | Individual work | The Booking system project → Phase 2
+| 28.11.2024 | 2 | Individual work | The Booking system project → Phase 2
 
 > [!NOTE]
 > Here is The Booking system project links:
