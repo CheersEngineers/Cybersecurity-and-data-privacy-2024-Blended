@@ -7,7 +7,16 @@ import { serveStatic } from "https://deno.land/x/hono/middleware.ts";
 // Create the Hono app
 const app = new Hono();
 
-// Serve sta􀆟c files from the /sta􀆟c directory
+// Middleware to set security headers globally
+app.use('*', (c, next) => {
+    // Set the Content-Type header (automatically set by Hono for HTML, CSS, JS)
+    c.header('Content-Type', 'text/html'); // This will change based on your content type (text/css, application/javascript, etc.)
+    // Set X-Content-Type-Options header to 'nosniff'
+    c.header('X-Content-Type-Options', 'nosniff');
+    return next();
+});
+
+// Serve static files from the /static directory
 app.use('/static/*', serveStatic({ root: '.' }));
 
 // Serve the registration form
