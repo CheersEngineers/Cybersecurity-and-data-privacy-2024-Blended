@@ -18,10 +18,12 @@
 | 18.11.2024 | 2 | Lecture 4 | Authentication
 | 20.11.2024 | 2 | Individual work | The Booking system project → Phase 1: Step 1
 | 21.11.2024 | 3 | Individual work | The Booking system project → Phase 1: Step 2 & 3
+| 25.11.2024 | 2 | Lecture 5 | The project continues
 | 26.11.2024 | 2 | Individual work | The Booking system project → Updating UI on Registration page and testing
 | 26.11.2024 | 2 | Individual work | The Booking system project → Updating UI on Registration page and testing
 | 27.11.2024 | 2 | Individual work | The Booking system project → Phase 2
 | 01.12.2024 | 2 | Individual work | The Booking system project → Phase 2
+| 02.12.2024 | 2 | Lecture 6 | The project continues
 
 > [!NOTE]
 > Here is The Booking system project links:
