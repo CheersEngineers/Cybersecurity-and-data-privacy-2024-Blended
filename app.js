@@ -11,14 +11,14 @@ const app = new Hono();
 app.use('*', (c, next) => {
     // Set the Content-Type header (automatically set by Hono for HTML, CSS, JS)
     c.header('Content-Type', 'text/html'); // This will change based on your content type (text/css, application/javascript, etc.)
-    
+
     // Set Content-Security-Policy header
     c.header('Content-Security-Policy',
-        "default-src 'self';"+ 
-        "script-src 'self';"+
-        "style-src 'self';"+
-        "img-src 'self';"+
-        "frame-ancestors 'none';"+
+        "default-src 'self';" +
+        "script-src 'self';" +
+        "style-src 'self';" +
+        "img-src 'self';" +
+        "frame-ancestors 'none';" +
         "form-action 'self';");  // Allow form submissions only to your own domain
 
     // Set X-Content-Type-Options header to 'nosniff'
@@ -28,6 +28,11 @@ app.use('*', (c, next) => {
 
 // Serve static files from the /static directory
 app.use('/static/*', serveStatic({ root: '.' }));
+
+// Serve the index page
+app.get('/', async (c) => {
+    return c.html(await Deno.readTextFile('./views/index.html'));
+});
 
 // Serve the registration form
 app.get('/register', async (c) => {
