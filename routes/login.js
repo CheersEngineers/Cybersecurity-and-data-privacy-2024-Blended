@@ -40,8 +40,8 @@ export async function loginUser(c) {
             return c.text("Invalid email or password", 400);
         }
     
-        // Authen􀆟ca􀆟on successful, proceed to create session or token
-        return c.text(`Welcome back, ${storedUsername}!`);
+        // Authentication successful, redirect to the index page
+        return c.redirect('/');
     
         } catch (error) {
             if (error instanceof z.ZodError) {
