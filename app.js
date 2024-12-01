@@ -18,8 +18,10 @@ app.use('*', (c, next) => {
         "script-src 'self';" +
         "style-src 'self';" +
         "img-src 'self';" +
+        "object-src 'none';" + // Prevent use of <object>, <embed>, etc.
+        "base-uri 'self';" +  // Restrict base tag
         "frame-ancestors 'none';" +
-        "form-action 'self';");  // Allow form submissions only to your own domain
+        "form-action 'self';"); // Allow form submissions only to your own domain
 
     // Set X-Content-Type-Options header to 'nosniff'
     c.header('X-Content-Type-Options', 'nosniff');
