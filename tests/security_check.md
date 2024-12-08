@@ -35,16 +35,22 @@
 * How should it work/What should be fixed?
     * Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.
 
-## Problem nr. 4:
+## Problem nr. 4: Session Management Security
 * What is wrong?
-    * A Format String error occurs when the submitted data of an input string is evaluated as a command by the application. Potential Format String Error. The script closed the connection on a /%s.
+    * The session data is stored in an in-memory session store (`sessionStore` in `sessionService.js`), which lacks scalability and persistence. Additionally:
+        * No enforcement of session expiration on the server side.
+        * Session IDs are generated with `crypto.randomUUID()` but are stored without encryption.
 * How did you find it?
-    * ZAP - Active Scan (round: 5).
+    * Found during the review of `sessionService.js` and `app.js`.
 * How should it work/What should be fixed?
-    * Rewrite the background program using proper deletion of bad character strings. This will require a recompile of the background executable.
+    * Store sessions in a persistent and scalable session store, such as Redis, with expiration policies.
+    * Encrypt session data at rest.
+    * Ensure expired sessions are actively invalidated server-side.
 
 ## Problem nr. 5: Password Security Practices
 * What is wrong?
     * The passwords are hashed using `bcrypt`, which is good. However, a manual salt is generated and passed into `bcrypt.hash`, which is unnecessary as `bcrypt` internally manages salting securely. This introduces the risk of developer error in managing salts.
 * How did you find it?
+    * Observed in the `register.js` code while reviewing the user registration logic.
 * How should it work/What should be fixed?
+    * Remove manual salt generation and directly use `bcrypt.hash(password)` for hashing. This leverages the built-in secure salting mechanism of `bcrypt`.
