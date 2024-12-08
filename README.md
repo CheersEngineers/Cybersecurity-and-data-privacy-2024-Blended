@@ -83,8 +83,8 @@
 >  - Unprotected admin functionality with unpredictable URL (Apprentice)
 >  - User role controlled by request parameter (Apprentice)
 
-> [!NOTE]
-> Now let's take a look at what was the Pros and Cons while using Portsvigger with Burp Suite Community Edition.
+
+# Now let's take a look at what was the Pros and Cons while using Portsvigger with Burp Suite Community Edition.
 
 > ### Pros in Portswigger Labs:
 >  - I enjoyed to do the tasks and accomplish them. This gives great practical experience on the subjects.
