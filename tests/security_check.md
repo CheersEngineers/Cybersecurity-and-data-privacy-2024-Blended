@@ -6,7 +6,7 @@
 * How did you find it?
     * In the registration page.
 * How should it work/What should be fixed?
-    * Input- && Server-Side validation.
+    * Input- & Server-Side validation.
     * Age Input Handling.
     * User feedback.
     * Database Integrity.
