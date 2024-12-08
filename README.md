@@ -18,10 +18,12 @@
 | 18.11.2024 | 2 | Lecture 4 | Authentication
 | 20.11.2024 | 2 | Individual work | The Booking system project → Phase 1: Step 1
 | 21.11.2024 | 3 | Individual work | The Booking system project → Phase 1: Step 2 & 3
+| 25.11.2024 | 2 | Lecture 5 | The project continues
 | 26.11.2024 | 2 | Individual work | The Booking system project → Updating UI on Registration page and testing
 | 26.11.2024 | 2 | Individual work | The Booking system project → Updating UI on Registration page and testing
 | 27.11.2024 | 2 | Individual work | The Booking system project → Phase 2
-| 28.11.2024 | 2 | Individual work | The Booking system project → Phase 2
+| 01.12.2024 | 2 | Individual work | The Booking system project → Phase 2
+| 02.12.2024 | 2 | Lecture 6 | The project continues
 
 > [!NOTE]
 > Here is The Booking system project links:
@@ -41,8 +43,11 @@
 > Phase 2:
 > - Link to report 1: Create login.html and login.js pages and get them working properly. Attack made by active scan.
 > - https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/login_page_first_test.md
-> - Link to report 2: Adding X-content-Type-Options: nosniff Header. Attack made with spider attack.
+> - Link to report 2: Adding X-content-Type-Options: nosniff Header. Attack made with active scan and spider attack.
 > - https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/login_page_second_test.md
+> - Link to report 3: Setting a basic CSP Header combined with X-Content-Type. Attack made with active scan and spider attack.
+> - https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/login_page_third_test.md
+> - Link to report 4: Content-Security-Policy Enhancements. Sanitize User Inputs. Error Handling. Serve pages (updated). https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/login_page_fourth_test.md
 
 > [!NOTE]
 > Here is a list of completed Labs.
