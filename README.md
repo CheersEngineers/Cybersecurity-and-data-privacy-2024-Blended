@@ -27,9 +27,8 @@
 | 04.12.2024 | 2 | Open space | Workshop
 | 08.12.2024 | 2 | Individual work | The Booking system project → Phase 3
 
-> [!NOTE]
-> Here is The Booking system project links:
 
+# Here is The Booking system project links:
 
 > [!NOTE]
 > Phase 1:
