@@ -33,11 +33,11 @@
 
 > [!NOTE]
 > Phase 1:
-> - Link to report 1: https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/Registration_page_first_test.md
+> - Link to report 1: https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/02fa81c90fd1fe4cadf37b5411b9f9114f8affa1/tests/Registration_page_first_test.md
 > - Path Traversal and SQL Injection removed.
-> - Link to report 2: https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/Registration_page_second_test.md
+> - Link to report 2: https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/02fa81c90fd1fe4cadf37b5411b9f9114f8affa1/tests/Registration_page_second_test.md
 > - User Agent Fuzzer removed.
-> - Link to report 3: https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/Registration_page_third_test.md
+> - Link to report 3: https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/02fa81c90fd1fe4cadf37b5411b9f9114f8affa1/tests/Registration_page_third_test.md
 > - No more alerts.
 
 
