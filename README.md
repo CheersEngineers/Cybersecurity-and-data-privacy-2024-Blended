@@ -55,8 +55,8 @@
 > Phase 3:
 > Link to Security Check .MD -report: https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/bec17cd371b254506208c092c09440dc5aff8d21/tests/security_check.md
 
-> [!NOTE]
-> Here is a list of completed Labs.
+
+# Here is a list of completed Labs.
 
 > ### Completed Labs in SQL injection:
 > - SQL injection vulnerability in WHERE clause allowing retrieval of hidden data (Apprentice)
