@@ -52,6 +52,9 @@
 > - Link to report 4: Content-Security-Policy Enhancements. Sanitize User Inputs. Error Handling. Serve pages (updated). https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/main/login_page_fourth_test.md
 
 > [!NOTE]
+> Phase 3:
+
+> [!NOTE]
 > Here is a list of completed Labs.
 
 > ### Completed Labs in SQL injection:
