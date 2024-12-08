@@ -15,6 +15,7 @@
 
 ## Problem nr. 2:
 * What is wrong?
+    * Allowing users to choose their role during registration, such as "reserver" or "administrator".
 * How did you find it?
 * How should it work/What should be fixed?
 
