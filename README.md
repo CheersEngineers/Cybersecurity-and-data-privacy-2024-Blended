@@ -25,7 +25,7 @@
 | 01.12.2024 | 2 | Individual work | The Booking system project → Phase 2
 | 02.12.2024 | 2 | Lecture 6 | The project continues
 | 04.12.2024 | 2 | Open space | Workshop
-| 08.12.2024 | 2 | Individual work | The Booking system project → Phase 3
+| 08.12.2024 | 4 | Individual work | The Booking system project → Phase 3
 
 
 # Here is The Booking system project links:
