@@ -1,10 +1,10 @@
 # Perform a security check of the booking system, 5 most important points that shoulde be fixed:
 
-## Problem nr. 1:
+## Problem nr. 1: Age validation
 * What is wrong?
     * User can choose own birthdate when the system age limit is 15.
 * How did you find it?
-    * In the registration form.
+    * Observed in `register.js` while ezamining `registerSchema` field.
 * How should it work/What should be fixed?
     * Input- & Server-Side validation.
     * Age Input Handling.
