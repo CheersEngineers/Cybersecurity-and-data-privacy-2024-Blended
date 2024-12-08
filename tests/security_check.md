@@ -13,27 +13,24 @@
     * Security Measures (protect the form and API edpoints against malicious inputs).
     * Testing and Fixing Issues.
 
-## Problem nr. 2:
+## Problem nr. 2: Access Control Weakness in Role Management
 * What is wrong?
-    * Allowing users to choose their role during registration, such as "reserver" or "administrator".
+    * Users can directly choose their roles during registration (`reserver` or `administrator`) via the form without any server-side restrictions.
 * How did you find it?
-    * In the registration form.
+    * Observed in `register.js` while examining the `role` field validation.
 * How should it work/What should be fixed?
-    * Define Role Selection Logic.
-    * Role Management on the Backend.
-    * UI Feedback.
-    * Audit and Logging.
-    * Security Fixes. Remove Administrator Role from UI (hide it).
-    * Authorization and Permissions.
-    * Testing and Fixing Issues.
+    * The `role` should not be provided by the user during registration. Instead, assign the default role (`reserver`) server-side.
+    * Allow role escalation (`administrator`) only via a secure process, such as an admin-controlled dashboard.
 
-## Problem nr. 3:
+## Problem nr. 3: SQL Injection Vulnerability in Database Queries
 * What is wrong?
-    * This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.
+    * The application uses parameterized queries, which is good. However:
+        * `username` is checked for uniqueness using `client.queryArray` without adequate consideration for potential email casing issues. This might allow duplicate emails like `user@domain.com` and `User@Domain.com` due to case-insensitive behavior.
 * How did you find it?
-    * ZAP - Spider Attack.
+    * Observed in `register.js` during the implementation of the `isUniqueUsername` function.
 * How should it work/What should be fixed?
-    * Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.
+    * Normalize emails to lowercase before storing and comparing them in the database.
+    * Add a unique index constraint on the `username` column in the database to enforce uniqueness at the database level.
 
 ## Problem nr. 4: Session Management Security
 * What is wrong?
