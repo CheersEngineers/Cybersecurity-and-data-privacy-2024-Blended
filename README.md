@@ -1,3 +1,16 @@
+# Pages
+0. http://localhost:8000 --> GET
+1. http://localhost:8000/register --> GET and POST
+2. http://localhost:8000/login --> GET and POST
+3. http://localhost:8000/logout --> GET
+4. http://localhost:8000/resources --> GET and POST
+5. http://localhost:8000/reservation --> GET and POST
+6. http://localhost:8000/resourcesList --> GET
+7. http://localhost:8000/terms --> GET
+8. http://localhost:8000/privacynotice --> GET
+9. http://localhost:8000/account --> GET
+10. http://localhost:8000/accountInfo --> GET
+
 # Logbook
 
 | Date | Number of hours used | Subject(s) | Output
