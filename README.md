@@ -26,6 +26,7 @@
 | 02.12.2024 | 2 | Lecture 6 | The project continues
 | 04.12.2024 | 2 | Open space | Workshop
 | 08.12.2024 | 4 | Individual work | The Booking system project → Phase 3
+| 13.12.2024 | 3 | Individual work | Portswigger Labs
 | 14.12.2024 | 4 | Individual work | The Booking system project → Phase 4
 | 15.12.2024 | 4 | Individual work | The Booking system project → Final phase
 
@@ -74,6 +75,7 @@
 > ### Completed Labs in Cross-site scripting:
 >  - Reflected XSS into HTML context with nothing encoded (Apprentice)
 >  - Stored XSS into HTML context with nothing encoded (Apprentice)
+>  - Lab: DOM XSS in innerHTML sink using source location.search (Apprentice)
 
 > ### Completed Labs in Authentication:
 >  - Username enumeration via different responses (Apprentice)
