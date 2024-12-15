@@ -5,11 +5,9 @@ import { registerResource, getResources } from "./routes/resource.js";
 import { registerReservation, handleReservationForm } from "./routes/reservation.js";
 import { handleIndex, handleDefaultIndex } from "./routes/indexPage.js";
 import { getSession, destroySession, getCookieValue } from "./sessionService.js"; // For sessions
+import client from "./db/db.js"; // Import the database client
 
 let connectionInfo = {};
-
-// In-memory session store (replace with a database in production)
-const sessionStore = new Map();
 
 // Middleware to set security headers globally
 async function addSecurityHeaders(req, handler) {
@@ -41,6 +39,19 @@ async function serveStaticFile(path, contentType) {
     }
 }
 
+// Migration function to add the terms_accepted column
+async function addTermsAcceptedColumn() {
+    try {
+        await client.queryArray(`
+            ALTER TABLE zephyr_users
+            ADD COLUMN IF NOT EXISTS terms_accepted BOOLEAN DEFAULT FALSE;
+        `);
+        console.log("Column 'terms_accepted' checked/added successfully.");
+    } catch (error) {
+        console.error("Error adding column 'terms_accepted':", error);
+    }
+}
+
 // Handle incoming requests
 async function handler(req) {
     const url = new URL(req.url);
@@ -57,7 +68,6 @@ async function handler(req) {
         const session = getSession(req);
         if (session) {
             return await handleIndex(req);
-
         }
         return await handleDefaultIndex(req);
     }
@@ -186,6 +196,9 @@ async function mainHandler(req, info) {
     connectionInfo = info;
     return await addSecurityHeaders(req, handler);
 }
+
+// Run the migration to add the terms_accepted column
+await addTermsAcceptedColumn();
 
 serve(mainHandler, { port: 8000 });
 //serve(mainHandler, { port: 80, hostname: "0.0.0.0" });

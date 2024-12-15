@@ -27,7 +27,8 @@ export async function registerUser(c) {
     const password = c.get('password');
     const birthdate = c.get('birthdate');
     const role = c.get('role');
-    const terms_accepted = c.get('accept_terms');
+    const terms_accepted = c.get('terms_accepted');
+
     try {
         // Validate the input data using Zod
         registerSchema.parse({ username, password, birthdate, role, terms_accepted });
@@ -36,21 +37,25 @@ export async function registerUser(c) {
         if (!(await isUniqueUsername(username))) {
             return new Response("Email already in use", { status: 400 });
         }
+
         // Hash the user's password
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
 
         // Insert the new user into the database
-        await client.queryArray(`INSERT INTO zephyr_users (username, password_hash, role, birthdate, terms_accepted) VALUES ($1, $2, $3, $4, TRUE)`, [username, hashedPassword, role, birthdate]);
+        await client.queryArray(
+            `INSERT INTO zephyr_users (username, password_hash, role, birthdate, terms_accepted) VALUES ($1, $2, $3, $4, TRUE)`,
+            [username, hashedPassword, role, birthdate]
+        );
+
         // Success response, redirect to the index page
         return new Response(null, { status: 302, headers: { Location: "/", }, });
-
     } catch (error) {
+        console.error("Error during registration:", error); // Log the error
         if (error instanceof z.ZodError) {
             // Handle validation errors from Zod
             return new Response(`Validation Error: ${error.errors.map(e => e.message).join(", ")}`, { status: 400 });
         }
-        console.error(error);
         return new Response("Error during registration", { status: 500 });
     }
 }
