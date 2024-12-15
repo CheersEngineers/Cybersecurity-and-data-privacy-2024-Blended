@@ -11,6 +11,9 @@
 9. http://localhost:8000/account --> GET
 10. http://localhost:8000/accountInfo --> GET
 
+> [!NOTE]
+> Run the command: deno run --allow-net --allow-env --allow-read --watch app.js
+
 # Logbook
 
 | Date | Number of hours used | Subject(s) | Output
