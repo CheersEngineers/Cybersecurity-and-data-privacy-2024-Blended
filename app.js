@@ -39,16 +39,16 @@ async function serveStaticFile(path, contentType) {
     }
 }
 
-// Migration function to add the terms_accepted column
-async function addTermsAcceptedColumn() {
+// Migration function to add the created_at column
+async function addCreatedAtColumn() {
     try {
         await client.queryArray(`
             ALTER TABLE zephyr_users
-            ADD COLUMN IF NOT EXISTS terms_accepted BOOLEAN DEFAULT FALSE;
+            ADD COLUMN IF NOT EXISTS created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
         `);
-        console.log("Column 'terms_accepted' checked/added successfully.");
+        console.log("Column 'created_at' checked/added successfully.");
     } catch (error) {
-        console.error("Error adding column 'terms_accepted':", error);
+        console.error("Error adding column 'created_at':", error);
     }
 }
 
@@ -167,6 +167,9 @@ async function handler(req) {
     // Route: Account info
     if (url.pathname === "/accountInfo" && req.method === "GET") {
         const session = getSession(req);
+        if (!session) {
+            return new Response("Unauthorized", { status: 401 });
+        }
         return await getAccountInfo(session.username);
     }
 
@@ -197,8 +200,8 @@ async function mainHandler(req, info) {
     return await addSecurityHeaders(req, handler);
 }
 
-// Run the migration to add the terms_accepted column
-await addTermsAcceptedColumn();
+// Run the migration to add the created_at column
+await addCreatedAtColumn();
 
 serve(mainHandler, { port: 8000 });
 //serve(mainHandler, { port: 80, hostname: "0.0.0.0" });

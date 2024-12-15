@@ -7,9 +7,8 @@ const registerSchema = z.object({
     username: z.string().email({ message: "Invalid email address" }).max(50, "Email must not exceed 50 characters"),
     password: z.string().min(8, "Password must be at least 8 characters long"),
     birthdate: z.string().refine((date) => {
-        // Ensure birthdate is a valid date (and optionally check for age)
         const birthDateObj = new Date(date);
-        return !isNaN(birthDateObj.getTime()); // Check if it's a valid date
+        return !isNaN(birthDateObj.getTime());
     }, { message: "Invalid birthdate" }),
     role: z.enum(["reserver", "administrator"], { message: "Invalid role" }),
     terms_accepted: z.enum(["on"], { message: "You must accept the terms of service." }),
@@ -53,16 +52,15 @@ export async function registerUser(c) {
     } catch (error) {
         console.error("Error during registration:", error); // Log the error
         if (error instanceof z.ZodError) {
-            // Handle validation errors from Zod
             return new Response(`Validation Error: ${error.errors.map(e => e.message).join(", ")}`, { status: 400 });
         }
         return new Response("Error during registration", { status: 500 });
     }
 }
 
+// Fetch account information
 export async function getAccountInfo(username) {
     try {
-        // Fetch account details from the database
         const result = await client.queryObject(
             `SELECT username, role, terms_accepted, created_at FROM zephyr_users WHERE username = $1`,
             [username]
@@ -72,7 +70,6 @@ export async function getAccountInfo(username) {
             return new Response("Account not found", { status: 404 });
         }
 
-        // Respond with the account details
         return new Response(JSON.stringify(result.rows[0]), {
             status: 200,
             headers: { "Content-Type": "application/json" },
