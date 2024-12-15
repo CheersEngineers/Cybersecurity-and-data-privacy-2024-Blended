@@ -35,6 +35,7 @@
 | 20.11.2024 | 2 | Individual work | The Booking system project → Phase 1: Step 1
 | 21.11.2024 | 3 | Individual work | The Booking system project → Phase 1: Step 2 & 3
 | 25.11.2024 | 2 | Lecture 5 | The project continues
+| 25.11.2024 | 3 | Individual work | Portswigger Labs
 | 26.11.2024 | 2 | Individual work | The Booking system project → Updating UI on Registration page and testing
 | 26.11.2024 | 2 | Individual work | The Booking system project → Updating UI on Registration page and testing
 | 27.11.2024 | 2 | Individual work | The Booking system project → Phase 2
@@ -43,8 +44,8 @@
 | 04.12.2024 | 2 | Open space | Workshop
 | 08.12.2024 | 4 | Individual work | The Booking system project → Phase 3
 | 13.12.2024 | 3 | Individual work | Portswigger Labs
-| 14.12.2024 | 4 | Individual work | The Booking system project → Phase 4
-| 15.12.2024 | 4 | Individual work | The Booking system project → Final phase
+| 14.12.2024 | 6 | Individual work | The Booking system project → Phase 4
+| 15.12.2024 | 6 | Individual work | The Booking system project → Final phase
 
 
 # Here is The Booking system project links:
@@ -73,6 +74,10 @@
 > [!NOTE]
 > Phase 3:
 > Link to Security Check .MD -report: https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/bec17cd371b254506208c092c09440dc5aff8d21/tests/security_check.md
+
+> [!NOTE]
+> Phase 4:
+> Link to final report after fixing String Error (medium risk): https://github.com/CheersEngineers/Cybersecurity-and-data-privacy-2024-Blended/blob/ae528ffe03f35ff50e09a76441b93d99cdbad50d/tests/Report_on_final_phase.md
 
 
 # Here is a list of completed Labs.
